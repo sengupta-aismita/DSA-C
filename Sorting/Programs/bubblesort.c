@@ -16,6 +16,24 @@ void bubbleSort(int *arr, int n){
     }
 }
 
+void optimized(int *arr, int n){
+    int i, j, flag = 0, temp;
+    for ( i = 0; i < n; i++)
+    {
+        flag = 0;
+        for(j = 0; j< n-i-1; j++){
+              if(arr[j] > arr[j+1]){
+                flag = 1;
+                temp = arr[j];
+              arr[j] = arr[j+1];
+              arr[j+1] = temp;
+              }
+        }
+    }
+    if(flag == 0)
+    return;  
+}
+
 int main(){
     int n,i;
     printf("Enter number of elements in the array : ");
@@ -27,6 +45,7 @@ int main(){
         scanf("%d", &arr[i]);
     }
     bubbleSort(arr, n);
+    optimized(arr, n);
     printf("\nThe sorted array is : ");
     for ( i = 0; i < n; i++)
     {
