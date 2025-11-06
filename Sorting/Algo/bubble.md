@@ -10,6 +10,7 @@ void bubbleSort(int *arr, int n){
     Step 6: exit
 }
 `**Time Complexity: O(n^2)**`
+```
 
 # Optimized Bubble Sort
 
@@ -26,3 +27,4 @@ void bubbleSort(int *arr, int n){
 }
 `**Best Time Complexity O(n)**`
 `**Worst Time Complexity: O(n^2)**`
+```
