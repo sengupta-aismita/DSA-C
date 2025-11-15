@@ -7,7 +7,7 @@ void merge(int *arr, int beg, int mid, int end){
     int temp[end - beg +1]; //merging indices 0 to 3 needs 4 elements (3 - 0 + 1 = 4)
     int i = beg, j = mid+1, index = 0; //index of temp arr
     while(i<= mid && j<=end){
-        if(arr[i]< arr[j]){
+        if(arr[i]<= arr[j]){
             temp[index] = arr[i]; //storing smaller element in temp arr
             i++;
         }
@@ -39,7 +39,8 @@ void merge(int *arr, int beg, int mid, int end){
 
 void mergeSort(int *arr, int beg, int end){
     int mid;
-    if(beg<=end){  //recursive method so , if used
+    if(beg<end){  //recursive method so , if used
+        mid = beg + (end - beg)/2;
         mergeSort(arr, beg, mid);
         mergeSort(arr, mid+1, end);
         merge(arr, beg, mid, end);
